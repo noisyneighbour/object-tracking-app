@@ -32,7 +32,7 @@ def parse_args(args=None):
 
     parser.add_argument('--framework', type=str, default='tf',
                         help='(tf, tflite, trt)')
-    parser.add_argument('--weights', type=str, default='./checkpoints/yolov4-416',
+    parser.add_argument('--weights', type=str, default='/checkpoints/yolov4-416',
                         help='Path to weights file')
     parser.add_argument('--size', type=int, default=416,
                         help='Resize images to')

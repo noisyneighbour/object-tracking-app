@@ -73,7 +73,7 @@ def render_trajectory_visual(video_path, detections, frame_id=None):
                 
                 label = f"{class_name}-{track_id}"
                 cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
-                cv2.putText(frame, (label + f' {round(score)}'), (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
+                cv2.putText(frame, (label + f' {round(score, 2)}'), (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
     cap.release()
 

@@ -84,7 +84,7 @@ def process(video_id):
     return jsonify({
         "video_path": video_path,
         "detections": detections,
-        "image_path": image_path
+        "image_path": image_path[4:]
     }), 200
 
 @bp.route("/videos", methods=["GET"])
