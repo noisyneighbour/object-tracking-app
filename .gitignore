@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.idea
+.DS_Store
+.idea/
+
+# Exclude model weights
+*.weights
+*.pb
+*.tflite
+*.trt
+checkpoints/
+
+outputs/
+flask_app/outputs/
+object_tracker/outputs/
+videos/
+flask_app/videos/
+object_tracker/videos/
+object_tracker/data/video/

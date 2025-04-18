@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS videos (
+    id SERIAL PRIMARY KEY,
+    path VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS detections (
+    id SERIAL PRIMARY KEY,
+    video_id INTEGER NOT NULL REFERENCES videos(id) ON DELETE CASCADE,
+    frame_num INTEGER NOT NULL,
+    track_id INTEGER,
+    class_name VARCHAR(255) NOT NULL,
+    bbox FLOAT[4] NOT NULL,
+    score FLOAT NOT NULL
+);

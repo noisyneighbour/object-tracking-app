@@ -1,0 +1,23 @@
+name: base
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Conda dependencies
+  - python=3.8
+  - numpy<1.24
+  - tensorflow
+  - matplotlib
+  - pillow
+  - tqdm
+  - easydict
+  - lxml
+  - absl-py
+  - pip
+  - wrapt=1.14.1
+  - pip:
+      - opencv-python-headless
+      - scipy
+      - requests
+      - flask
