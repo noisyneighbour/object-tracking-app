@@ -75,17 +75,6 @@
             loadVideos();
         }
 
-        async function loadFrames() {
-            const res = await fetch("/frames");
-            const frames = await res.json();
-            const list = document.getElementById("frame-list");
-            list.innerHTML = "";
-            frames.forEach(frame => {
-                const item = document.createElement("li");
-                item.textContent = `Frame ${frame}`;
-                list.appendChild(item);
-            });
-        }
 
         async function loadVideos() {
             const res = await fetch("/videos");
@@ -157,7 +146,6 @@
         }
 
         // Initial load
-        loadFrames();
         loadVideos();
         loadDbVideos();
     </script>
